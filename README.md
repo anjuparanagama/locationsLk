@@ -1,25 +1,22 @@
-# @srilanka/locations-core
+# 📍 locationslk
 
-ශ්‍රී ලංකාවේ ප්‍රදේශ (provinces) සහ දිස්ත්‍රික් (districts) පිළිබඳ ස්ථිර, ටයිප් කරන ලද SDK එකකි.
+A typed Sri Lankan locations SDK for provinces and districts.
 
-`@srilanka/locations-core` is a typed Sri Lankan locations SDK for provinces and districts. It provides deterministic lookups, simple search, translation helpers, and validation utilities with a small, tree-shakable API.
+It provides deterministic lookups, search support (Sinhala / Tamil / English), translation utilities, and validation helpers for Sri Lankan administrative divisions.
 
-**Quick Install**
+---
 
-```bash
-pnpm install
-# when using as a dependency
-pnpm add @srilanka/locations-core
-```
-
-**Build & Test (local)**
+## 🚀 Installation
 
 ```bash
-pnpm build
-pnpm test
+npm install locationslk
+# or
+pnpm add locationslk
 ```
 
-**Quick Start (TypeScript)**
+---
+
+## ⚡ Quick Start (TypeScript / ES Modules)
 
 ```ts
 import {
@@ -30,14 +27,18 @@ import {
   searchProvince,
   translateLocation,
   validateAddress,
-} from "@srilanka/locations-core";
+} from "locationslk";
 
-// Lookups
+// Province lookup
 const western = getProvinceById("western");
+
+// District lookup
 const colombo = getDistrictById("colombo");
+
+// Get districts in a province
 const westernDistricts = getDistrictsByProvince("western");
 
-// Search (partial strings supported, works with Sinhala/Tamil/English)
+// Search (supports Sinhala / Tamil / English)
 const districtMatches = searchDistrict("කො");
 const provinceMatches = searchProvince("West");
 
@@ -45,64 +46,145 @@ const provinceMatches = searchProvince("West");
 const translated = translateLocation("Colombo", "si");
 
 // Validation
-const ok = validateAddress({ provinceId: "western", districtId: "colombo" });
+const isValid = validateAddress({
+  provinceId: "western",
+  districtId: "colombo",
+});
 ```
 
-Sample JavaScript usage (CommonJS):
+---
+
+## 📦 CommonJS Usage
 
 ```js
-const { getDistrictById, searchDistrict } = require("@srilanka/locations-core");
+const { getDistrictById, searchDistrict } = require("locationslk");
 
 console.log(getDistrictById("colombo"));
-console.log(searchDistrict("කො"));
+console.log(searchDistrict("Amp"));
 ```
 
-**Use Cases**
+---
 
-- Form validation for Sri Lankan addresses (ensure province/district IDs are valid).
-- Autocomplete/search UI for selecting provinces or districts (supports Sinhala/Tamil/English queries).
-- Localisation: mapping display names to different languages using `translateLocation`.
-- Static datasets for seeding databases or server-side validation without external lookups.
+## 🎯 Features
 
-**API Reference (public exports)**
+- 🇱🇰 Sri Lanka provinces & districts dataset
+- 🔎 Fast search (Sinhala / Tamil / English support)
+- 🧭 Deterministic ID-based lookups
+- 🌐 Translation support
+- ✅ Address validation
+- ⚡ Lightweight and tree-shakable
 
-- Types:
-  - `Language` = `"en" | "si" | "ta"`
-  - `Province`, `District` — typed records
-- Province functions:
-  - `getProvinces()`
-  - `getProvinceById(id)`
-  - `getProvinceByCode(code)`
-- District functions:
-  - `getDistricts()`
-  - `getDistrictById(id)`
-  - `getDistrictByCode(code)`
-  - `getDistrictsByProvince(provinceId)`
-- Search:
-  - `searchProvince(query)`
-  - `searchDistrict(query)`
-- Translation:
-  - `translateLocation(input, language)`
-- Validation:
-  - `isValidProvince(id)`
-  - `isValidDistrict(id)`
-  - `validateAddress({ provinceId, districtId })`
+---
 
-For exact signatures and types see the source exports in [src/index.ts](src/index.ts#L1-L20).
+## 🧩 API Reference
 
-**Testing & Development**
+### Provinces
 
-- Run tests: `pnpm test` (uses Vitest)
-- Build for distribution: `pnpm build` (uses `tsup`)
-- Dev mode (watch): `pnpm dev`
+```ts
+getProvinces();
+getProvinceById(id);
+getProvinceByCode(code);
+```
 
-**Contributing / Local verification**
+---
 
-- Clone repo and run `pnpm install`
-- Run `pnpm build` then `pnpm test` to verify changes
+### Districts
 
-If you'd like, I can also add a small example script under `examples/` demonstrating a search + validation flow.
+```ts
+getDistricts();
+getDistrictById(id);
+getDistrictByCode(code);
+getDistrictsByProvince(provinceId);
+```
 
-## License
+---
 
-ISC
+### Search
+
+```ts
+searchProvince(query);
+searchDistrict(query);
+```
+
+Supports partial matching and multilingual input.
+
+---
+
+### Translation
+
+```ts
+translateLocation(input, language);
+```
+
+**Languages:**
+
+```ts
+type Language = "en" | "si" | "ta";
+```
+
+---
+
+### Validation
+
+```ts
+isValidProvince(id);
+isValidDistrict(id);
+
+validateAddress({
+  provinceId,
+  districtId,
+});
+```
+
+---
+
+## 🧪 Development
+
+```bash
+pnpm install
+pnpm build
+pnpm test
+```
+
+Watch mode:
+
+```bash
+pnpm dev
+```
+
+---
+
+## 🧪 Testing
+
+Uses **Vitest** for unit testing.
+
+```bash
+pnpm test
+```
+
+---
+
+## 📁 Use Cases
+
+- 🏠 Sri Lankan address form validation
+- 🔍 Autocomplete dropdowns (province/district)
+- 🌍 Multi-language location search
+- 🗄️ Database seeding with stable location IDs
+- 🧾 Backend validation without external APIs
+
+---
+
+## 📌 Example: Form Validation Flow
+
+```ts
+const input = {
+  provinceId: "western",
+  districtId: "colombo",
+};
+
+if (validateAddress(input)) {
+  console.log("Valid Sri Lankan address");
+} else {
+  console.log("Invalid address");
+}
+```
