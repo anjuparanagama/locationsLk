@@ -1,0 +1,246 @@
+import type { Cities } from "../../types/cities";
+
+export const cities: readonly Cities[] = [
+  {
+    id: "padaviya",
+    code: "padaviya",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Padaviya",
+      si: "පදවිය",
+      ta: "பதவியா",
+    },
+  },
+  {
+    id: "palagala",
+    code: "palagala",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Palagala",
+      si: "පලාගල",
+      ta: "பலாகல",
+    },
+  },
+  {
+    id: "mihinthale",
+    code: "mihinthale",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Mihinthale",
+      si: "මිහින්තලේ",
+      ta: "மிஹிந்தலை",
+    },
+  },
+  {
+    id: "nachchaduwa",
+    code: "nachchaduwa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Nachchaduwa",
+      si: "නච්චදූව",
+      ta: "நாச்சதுவ",
+    },
+  },
+  {
+    id: "thalawa",
+    code: "thalawa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Thalawa",
+      si: "තලාව",
+      ta: "தலாவ",
+    },
+  },
+  {
+    id: "mahawilachchiya",
+    code: "mahawilachchiya",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Mahawilachchiya",
+      si: "මහවිලච්චිය",
+      ta: "மகாவிலச்சிய",
+    },
+  },
+  {
+    id: "medawachchiya",
+    code: "medawachchiya",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Medawachchiya",
+      si: "මැදවච්චිය",
+      ta: "மெதவச்சியா",
+    },
+  },
+  {
+    id: "ipalogama",
+    code: "ipalogama",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Ipalogama",
+      si: "ඉපලෝගම",
+      ta: "இபலோகம",
+    },
+  },
+  {
+    id: "thirappane",
+    code: "thirappane",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Thirappane",
+      si: "තිරප්පනේ",
+      ta: "திரப்பனை",
+    },
+  },
+  {
+    id: "rajanganaya",
+    code: "rajanganaya",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Rajanganaya",
+      si: "රාජාංගනය",
+      ta: "ராஜாங்கனை",
+    },
+  },
+  {
+    id: "palugaswewa",
+    code: "palugaswewa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Palugaswewa",
+      si: "පලුගස්වැව",
+      ta: "பலுகஸ்வெவ",
+    },
+  },
+  {
+    id: "kekirawa",
+    code: "kekirawa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Kekirawa",
+      si: "කැකිරාව",
+      ta: "கெக்கிராவ",
+    },
+  },
+  {
+    id: "rambewa",
+    code: "rambewa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Rambewa",
+      si: "රඹෑව",
+      ta: "ரம்பேவ",
+    },
+  },
+  {
+    id: "kebithigollewa",
+    code: "kebithigollewa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Kebithigollewa",
+      si: "කැබිතිගොල්ලෑව",
+      ta: "கெபித்திகொல்லேவ",
+    },
+  },
+  {
+    id: "thambuththegama",
+    code: "thambuththegama",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Thambuththegama",
+      si: "තඹුත්තේගම",
+      ta: "தம்புத்தேகம",
+    },
+  },
+  {
+    id: "nuwaragam-palatha-east",
+    code: "nuwaragam-palatha-east",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Nuwaragam Palatha East",
+      si: "නුවරගම් පළාත නැගෙනහිර",
+      ta: "நுவரகம் பாளாத்த கிழக்கு",
+    },
+  },
+  {
+    id: "nochchiyagama",
+    code: "nochchiyagama",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Nochchiyagama",
+      si: "නොච්චියාගම",
+      ta: "நொச்சியாகம",
+    },
+  },
+  {
+    id: "horowpothana",
+    code: "horowpothana",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Horowpothana",
+      si: "හොරොව්පතාන",
+      ta: "ஹொரவ்பொத்தான",
+    },
+  },
+  {
+    id: "galnewa",
+    code: "galnewa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Galnewa",
+      si: "ගල්නෑව",
+      ta: "கல்நேவ",
+    },
+  },
+  {
+    id: "galenbindunuwewa",
+    code: "galenbindunuwewa",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Galenbindunuwewa",
+      si: "ගලෙන්බිඳුනුවැව",
+      ta: "கலன்பிந்துனுவெவ",
+    },
+  },
+  {
+    id: "nuwaragam-palatha-central",
+    code: "nuwaragam-palatha-central",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Nuwaragam Palatha Central",
+      si: "නුවරගම් පළාත මධ්‍යම",
+      ta: "நுவரகம் பாளாத்த மத்திய",
+    },
+  },
+  {
+    id: "kahatagasdigiliya",
+    code: "kahatagasdigiliya",
+    provinceId: "north-central",
+    districtId: "anuradhapura",
+    name: {
+      en: "Kahatagasdigiliya",
+      si: "කහටගස්දිගිලිය",
+      ta: "கஹட்டகஸ்திகிலிய",
+    },
+  },
+];
