@@ -1,11 +1,16 @@
+import { cities } from "../data/cities";
 import { districts } from "../data/districts";
 import { provinces } from "../data/provinces";
+import type { Cities } from "../types/cities";
 import type { Language } from "../types/language";
 import { normalize } from "../utils/normalize";
 
-type TranslatableLocation = (typeof provinces)[number] | (typeof districts)[number];
+type TranslatableLocation =
+  | (typeof provinces)[number]
+  | (typeof districts)[number]
+  | (typeof cities)[number];
 
-const locations: readonly TranslatableLocation[] = [...provinces, ...districts];
+const locations: readonly TranslatableLocation[] = [...provinces, ...districts, ...cities];
 
 function getTranslation(location: TranslatableLocation, language: Language): string {
   return location.name[language];

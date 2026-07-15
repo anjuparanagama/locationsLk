@@ -1,5 +1,7 @@
+import { cities } from "../data/cities";
 import { districts } from "../data/districts";
 import { provinces } from "../data/provinces";
+import type { Cities } from "../types/cities";
 import type { District } from "../types/district";
 import type { Province } from "../types/province";
 import { normalize } from "../utils/normalize";
@@ -19,5 +21,11 @@ export function searchProvince(query: string): readonly Province[] {
 export function searchDistrict(query: string): readonly District[] {
   return districts.filter((district) => {
     return matchesQuery([district.name.en, district.name.si, district.name.ta], query);
+  });
+}
+
+export function searchCity(query: string): readonly Cities[] {
+  return cities.filter((city) => {
+    return matchesQuery([city.name.en, city.name.si, city.name.ta], query);
   });
 }
