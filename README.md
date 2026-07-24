@@ -1,6 +1,6 @@
 # locationslk
 
-locationslk is a typed Sri Lankan locations SDK for provinces, districts, and cities. It provides deterministic lookups, multilingual search, translation helpers, and validation utilities without requiring any external API.
+locationslk is a typed Sri Lankan locations SDK for provinces, districts and cities. It provides deterministic lookups, multilingual search, translation helpers, and validation utilities without requiring any external API.
 
 ## What this package provides
 
